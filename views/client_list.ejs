@@ -1,0 +1,74 @@
+<%- include('base', { 
+  title: 'Clientes',
+  description: 'Gestión de clientes', 
+  activePage: 'client_list',
+  body: `
+  <div class="page-header">
+    <h1>Clientes</h1>
+    <div class="actions">
+      <button class="btn btn-primary">Añadir Cliente</button>
+      <div class="search-box">
+        <input type="text" placeholder="Buscar clientes..." aria-label="Buscar">
+        <button type="submit" aria-label="Buscar">🔍</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="client-list">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Teléfono</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>María García</td>
+          <td>maria@example.com</td>
+          <td>+51 612 345 678</td>
+          <td>
+            <div class="action-buttons">
+              <button class="btn btn-small" aria-label="Ver">👁️</button>
+              <button class="btn btn-small" aria-label="Editar">✏️</button>
+              <button class="btn btn-small btn-danger" aria-label="Eliminar">🗑️</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Juan Pérez</td>
+          <td>juan@example.com</td>
+          <td>+51 623 456 789</td>
+          <td>
+            <div class="action-buttons">
+              <button class="btn btn-small" aria-label="Ver">👁️</button>
+              <button class="btn btn-small" aria-label="Editar">✏️</button>
+              <button class="btn btn-small btn-danger" aria-label="Eliminar">🗑️</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Ana Martínez</td>
+          <td>ana@example.com</td>
+          <td>+51 634 567 890</td>
+          <td>
+            <div class="action-buttons">
+              <button class="btn btn-small" aria-label="Ver">👁️</button>
+              <button class="btn btn-small" aria-label="Editar">✏️</button>
+              <button class="btn btn-small btn-danger" aria-label="Eliminar">🗑️</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="pagination">
+      <button disabled>Anterior</button>
+      <span>Página 1 de 1</span>
+      <button disabled>Siguiente</button>
+    </div>
+  </div>
+  `
+}) %>

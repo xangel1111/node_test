@@ -1,0 +1,74 @@
+<!-- Página de Productos (products.ejs) -->
+<%- include('base', { 
+  title: 'Productos',
+  description: 'Listado de productos disponibles', 
+  activePage: 'product_list',
+  body: `
+  <div class="page-header">
+    <h1>Productos</h1>
+    <div class="actions">
+      <button class="btn btn-primary">Añadir Producto</button>
+      <div class="search-box">
+        <input type="text" placeholder="Buscar productos..." aria-label="Buscar">
+        <button type="submit" aria-label="Buscar">🔍</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="product-image">
+        <img src="/api/placeholder/200/150" alt="Producto 1">
+      </div>
+      <div class="product-info">
+        <h3>Producto 1</h3>
+        <p class="product-category">Categoría: Electrónica</p>
+        <p class="product-price">89,99 €</p>
+        <p class="product-description">Descripción breve del producto. Características principales.</p>
+        <div class="product-actions">
+          <button class="btn btn-secondary">Ver Detalles</button>
+          <button class="btn btn-primary">Añadir al Carrito</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-image">
+        <img src="/api/placeholder/200/150" alt="Producto 2">
+      </div>
+      <div class="product-info">
+        <h3>Producto 2</h3>
+        <p class="product-category">Categoría: Hogar</p>
+        <p class="product-price">49,99 €</p>
+        <p class="product-description">Descripción breve del producto. Características principales.</p>
+        <div class="product-actions">
+          <button class="btn btn-secondary">Ver Detalles</button>
+          <button class="btn btn-primary">Añadir al Carrito</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-image">
+        <img src="/api/placeholder/200/150" alt="Producto 3">
+      </div>
+      <div class="product-info">
+        <h3>Producto 3</h3>
+        <p class="product-category">Categoría: Moda</p>
+        <p class="product-price">29,99 €</p>
+        <p class="product-description">Descripción breve del producto. Características principales.</p>
+        <div class="product-actions">
+          <button class="btn btn-secondary">Ver Detalles</button>
+          <button class="btn btn-primary">Añadir al Carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="pagination">
+    <button disabled>Anterior</button>
+    <span>Página 1 de 1</span>
+    <button disabled>Siguiente</button>
+  </div>
+  `
+}) %>

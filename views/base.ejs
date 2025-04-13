@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="<%= description || 'Mi aplicación web' %>">
+  <title><%= title %> | Mi Aplicación</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/images/favicon.ico">
+  <!-- Opcionalmente añade alguna fuente de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a href="/">Mi App</a>
+        </div>
+        <button class="navbar-toggle" aria-label="Menú">
+          <span class="navbar-toggle-icon"></span>
+        </button>
+        <div class="navbar-menu">
+          <ul class="nav-links">
+            <li class="<%= activePage === 'home' ? 'active' : '' %>">
+              <a href="/">Inicio</a>
+            </li>
+            <li class="<%= activePage === 'product_list' ? 'active' : '' %>">
+              <a href="/products">Productos</a>
+            </li>
+            <li class="<%= activePage === 'client_list' ? 'active' : '' %>">
+              <a href="/clients">Clientes</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="content">
+      <%- body %>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <%= new Date().getFullYear() %> Mi Aplicación. Todos los derechos reservados.</p>
+      <div class="footer-links">
+        <a href="/about">Acerca de</a>
+        <a href="/contact">Contacto</a>
+        <a href="/privacy">Privacidad</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

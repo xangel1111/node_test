@@ -1,0 +1,36 @@
+<%- include('base', { 
+  title: 'Inicio',
+  description: 'Bienvenido a Mi Aplicación - Tu solución integral', 
+  activePage: 'home',
+  body: `
+  <section class="hero">
+    <h1>Bienvenido a Mi Aplicación</h1>
+    <p class="lead">La plataforma que simplifica la gestión de tus productos y clientes</p>
+    <div class="cta-buttons">
+      <a href="/products" class="btn btn-primary">Ver Productos</a>
+      <a href="/clients" class="btn btn-secondary">Gestionar Clientes</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Características principales</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📦</div>
+        <h3>Gestión de Productos</h3>
+        <p>Organiza y administra tu inventario de manera eficiente</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">👥</div>
+        <h3>Datos de Clientes</h3>
+        <p>Mantén toda la información relevante de tus clientes centralizada</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>Reportes</h3>
+        <p>Visualiza métricas clave para tomar mejores decisiones</p>
+      </div>
+    </div>
+  </section>
+  `
+}) %>
